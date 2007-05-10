@@ -1,7 +1,7 @@
 # Defined in CVS makefile.
 %define	name	mailcap
 %define	version	2.0.4
-%define	release	%mkrel 16
+%define	release	%mkrel 17
 
 Summary:	Associates helper applications with particular file types
 Name:		%{name}
@@ -63,7 +63,6 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/mailcap.base
 %config(noreplace) %{_sysconfdir}/mailcap.vga
 %config(noreplace) %{_sysconfdir}/mime.types
-%config(noreplace) %{_sysconfdir}/menu-methods/mailcap
 %{_mandir}/man4/*
 
 
