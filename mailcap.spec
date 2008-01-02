@@ -16,6 +16,7 @@ Patch0:		mailcap-2.0.4.patch
 Patch1:		mailcap-2.0.4-java-web-start.patch
 Url:		http://archive.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/mailcap.html
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The mailcap file is used by the metamail program.  Metamail reads the
