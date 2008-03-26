@@ -1,7 +1,7 @@
 # Defined in CVS makefile.
 %define	name	mailcap
 %define	version	2.0.4
-%define	release	%mkrel 19
+%define	release	%mkrel 20
 
 Summary:	Associates helper applications with particular file types
 Name:		%{name}
@@ -9,12 +9,11 @@ Version:	%{version}
 Release:	%{release}
 License:	Public Domain
 Group:		System/Configuration/Networking 
-# get the source from our cvs repository (see
-# http://www.mandriva.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
+Source1:	mime.types
 Patch0:		mailcap-2.0.4.patch
 Patch1:		mailcap-2.0.4-java-web-start.patch
-Url:		http://archive.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/mailcap.html
+Patch2:		mailcap-2.0.4-ooffice.patch
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -32,6 +31,7 @@ handle non-text files.
 %setup -q
 %patch0 -p1 -b .mdk
 %patch1 -p1 -b .javastart
+%patch2 -p1 -b .ooffice
 
 %build
 
@@ -39,6 +39,9 @@ handle non-text files.
 rm -rf %{buildroot}
 perl -pi -e "s!/usr/man!%{_mandir}!g" Makefile
 %makeinstall
+
+# overwrite the original one, which is outdated
+install -m 0644 %{SOURCE1}  %{buildroot}/%{_sysconfdir}/mime.types
 
 %clean
 rm -rf %{buildroot}
@@ -50,5 +53,3 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/mailcap.vga
 %config(noreplace) %{_sysconfdir}/mime.types
 %{_mandir}/man4/*
-
-
