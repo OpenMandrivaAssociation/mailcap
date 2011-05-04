@@ -1,7 +1,7 @@
 # Defined in CVS makefile.
 %define	name	mailcap
 %define	version	2.0.4
-%define	release	%mkrel 25
+%define	release	%mkrel 26
 
 Summary:	Associates helper applications with particular file types
 Name:		%{name}
