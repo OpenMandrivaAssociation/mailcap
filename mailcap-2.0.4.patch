@@ -1,0 +1,80 @@
+--- mailcap-2.0.4/mailcap.mdk	2001-06-29 15:58:10.000000000 +0200
++++ mailcap-2.0.4/mailcap	2003-09-05 17:41:41.000000000 +0200
+@@ -26,26 +26,27 @@
+ # using "audio/basic" as the type.
+ 
+ ### 
+-### Begin Linux-Mandrake Mailcap
++### Begin Mandrake Linux Mailcap
+ ###
+ 
+ audio/mod; /usr/bin/mikmod %s
+-# play is apparently a security hole
++# play is apparently a security hole.
+ #audio/*; /usr/bin/play %s
+ 
+-image/*; xv %s
++image/*; qiv %s
+ 
+ video/*; xanim %s
+-video/mpeg; xanim %s
+ 
+-application/pgp; pgp -f < %s | metamail; needsterminal; \
++application/pgp; gpg < %s | metamail; needsterminal; \
+        test=test %{encapsulation}=entity 
+-application/pgp; pgp %s; needsterminal
++application/pgp; gpg %s; needsterminal
+ 
+ application/pdf; xpdf %s
+ 
++application/x-bittorrent; btdownloadgui.py %s
++
+ ###
+-### End Linux-Mandrake Modifications
++### End Mandrake Linux Modifications
+ ###
+ 
+ message/partial; showpartial %s %{id} %{number} %{total}
+@@ -120,7 +121,7 @@
+ # actual metamail source tree.
+ # You can also modify this line to get metamail patches from some trusted
+ # server other than thumper, if there is one -- man patch-metamail" for help.
+-application/x-metamail-patch; cat %s > /dev/null \; patch-metamail source-tree-root %{patchnumber}; needsterminal
++#application/x-metamail-patch; cat %s > /dev/null \; patch-metamail source-tree-root %{patchnumber}; needsterminal
+ 
+ # The following is for support of MacMIME, especially those
+ # the Columbia AppleTalk package (CAP) installed.
+--- mailcap-2.0.4/mailcap.vga.mdk	2001-06-29 15:58:10.000000000 +0200
++++ mailcap-2.0.4/mailcap.vga	2003-09-05 17:38:07.000000000 +0200
+@@ -29,13 +29,19 @@
+ ### Begin Linux-Mandrake Mailcap
+ ###
+ 
++audio/mod; /usr/bin/mikmod %s
+ # play is apparently a security hole.
+-# audio/*; /usr/bin/play %s
++#audio/*; /usr/bin/play %s
+ 
+-image/*; zgv %s
++image/*; qiv %s
+ 
+ video/*; xanim %s
+-video/mpeg; xmpeg %s
++
++application/pgp; gpg < %s | metamail; needsterminal; \
++       test=test %{encapsulation}=entity 
++application/pgp; gpg %s; needsterminal
++
++application/pdf; xpdf %s
+ 
+ ###
+ ### End Linux-Mandrake Modifications
+@@ -113,7 +119,7 @@
+ # actual metamail source tree.
+ # You can also modify this line to get metamail patches from some trusted
+ # server other than thumper, if there is one -- man patch-metamail" for help.
+-application/x-metamail-patch; cat %s > /dev/null \; patch-metamail source-tree-root %{patchnumber}; needsterminal
++#application/x-metamail-patch; cat %s > /dev/null \; patch-metamail source-tree-root %{patchnumber}; needsterminal
+ 
+ # The following is for support of MacMIME, especially those
+ # the Columbia AppleTalk package (CAP) installed.

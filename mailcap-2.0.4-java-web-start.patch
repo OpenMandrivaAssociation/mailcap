@@ -1,0 +1,18 @@
+--- mailcap-2.0.4/mime.types~	2001-06-29 15:58:10.000000000 +0200
++++ mailcap-2.0.4/mime.types	2007-02-07 20:23:14.000000000 +0100
+@@ -164,6 +164,7 @@ application/x-gtar		gtar
+ application/x-gzip
+ application/x-hdf		hdf
+ application/x-javascript	js
++application/x-java-jnlp-file	jnlp
+ application/x-koan		skp skd skt skm
+ application/x-latex		latex
+ application/x-netcdf		nc cdf
+--- mailcap-2.0.4/mailcap~	2007-02-07 20:16:12.000000000 +0100
++++ mailcap-2.0.4/mailcap	2007-02-07 20:24:35.000000000 +0100
+@@ -191,3 +191,5 @@ application/applefile; rcvAppleSingle %s
+ # foo/bar; echo not mosaic
+ 
+ text/html; /usr/bin/links '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
++
++type=application/x-java-jnlp-file; description="Java Web Start"; exts="jnlp"

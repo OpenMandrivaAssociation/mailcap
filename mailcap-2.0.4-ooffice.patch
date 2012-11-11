@@ -1,0 +1,41 @@
+diff -p -up mailcap-2.0.4/mailcap.orig mailcap-2.0.4/mailcap
+--- mailcap-2.0.4/mailcap.orig	2008-03-26 15:09:42.000000000 -0300
++++ mailcap-2.0.4/mailcap	2008-03-26 15:10:12.000000000 -0300
+@@ -26,7 +26,7 @@
+ # using "audio/basic" as the type.
+ 
+ ### 
+-### Begin Mandrake Linux Mailcap
++### Begin Mandriva Linux Mailcap
+ ###
+ 
+ audio/mod; /usr/bin/mikmod %s
+@@ -45,8 +45,27 @@ application/pdf; xpdf %s
+ 
+ application/x-bittorrent; btdownloadgui.py %s
+ 
++# openoffice
++application/vnd.oasis.opendocument.text; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.chart; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.chart-template; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.formula; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.formula-template; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.graphics; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.graphics-template; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.image; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.image-template; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.presentation; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.presentation-template; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.spreadsheet; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.spreadsheet-template; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.text; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.text-master; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.text-template; ooffice %s; needsterminal
++application/vnd.oasis.opendocument.text-web; ooffice %s; needsterminal
++
+ ###
+-### End Mandrake Linux Modifications
++### End Mandriva Linux Modifications
+ ###
+ 
+ message/partial; showpartial %s %{id} %{number} %{total}
