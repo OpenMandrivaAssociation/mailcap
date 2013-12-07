@@ -1,7 +1,7 @@
 Summary:	Associates helper applications with particular file types
 Name:		mailcap
 Version:	2.0.4
-Release:	31
+Release:	32
 License:	Public Domain
 Group:		System/Configuration/Networking 
 Source0:	%{name}-%{version}.tar.bz2
