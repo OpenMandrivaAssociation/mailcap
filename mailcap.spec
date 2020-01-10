@@ -23,7 +23,7 @@ handle non-text files.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 
