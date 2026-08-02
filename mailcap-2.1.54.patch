@@ -1,0 +1,17 @@
+diff -Nru mailcap-2.1.54.orig/mailcap mailcap-2.1.54.p0/mailcap
+--- mailcap-2.1.54.orig/mailcap	2023-05-23 10:40:22.000000000 +0200
++++ mailcap-2.1.54.p0/mailcap	2026-08-02 22:03:41.495293329 +0200
+@@ -1,5 +1,5 @@
+ ### 
+-### Begin Red Hat Mailcap
++### Begin OpenMandriva Mailcap
+ ###
+ 
+ audio/*; /usr/bin/xdg-open %s
+@@ -10,4 +10,6 @@
+ application/pdf; /usr/bin/xdg-open %s
+ application/postscript ; /usr/bin/xdg-open %s
+ 
++application/x-bittorrent; /usr/bin/xdg-open %s
++
+ text/html; /usr/bin/xdg-open %s ; copiousoutput

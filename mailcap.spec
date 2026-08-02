@@ -1,14 +1,14 @@
 Summary:	Associates helper applications with particular file types
 Name:		mailcap
-Version:	2.0.4
-Release:	42
+Version:	2.1.54
+Release:	1
 License:	Public Domain
 Group:		System/Configuration/Networking 
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}.tar.xz
 Source1:	mime.types
-Patch0:		mailcap-2.0.4.patch
-Patch1:		mailcap-2.0.4-java-web-start.patch
-Patch2:		mailcap-2.0.4-ooffice.patch
+Patch0:		mailcap-2.1.54.patch
+Patch1:		mailcap-2.1.54-java-web-start.patch
+Patch2:		mailcap-2.1.54-ooffice.patch
 BuildArch:	noarch
 
 %description

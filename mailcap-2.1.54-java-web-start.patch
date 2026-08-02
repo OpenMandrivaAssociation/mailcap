@@ -1,0 +1,9 @@
+diff -Nru mailcap-2.1.54.p0/mailcap mailcap-2.1.54.p1/mailcap
+--- mailcap-2.1.54.p0/mailcap	2026-08-02 22:03:41.495293329 +0200
++++ mailcap-2.1.54.p1/mailcap	2026-08-02 22:03:41.499584234 +0200
+@@ -13,3 +13,5 @@
+ application/x-bittorrent; /usr/bin/xdg-open %s
+ 
+ text/html; /usr/bin/xdg-open %s ; copiousoutput
++
++type=application/x-java-jnlp-file; description="Java Web Start"; exts="jnlp"
